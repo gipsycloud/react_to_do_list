@@ -1,22 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { cards } from './cards.js';
-import Card from './component/Card.js';
+import CardList from './App';
 
-function CardList() {
-  return (
-    <main className="card-list">
-      {cards.map((card) => {
-        return <Card key={card.id} {...card} />;
-      })}
-    </main>
+// React Hooks ..
+// useState
+var count = 0;
+function increase() {
+  count++;
+  console.log(count);
+}
+
+function Calculator() {
+  return(
+    <div style={{textAlign: 'center', margin: '2rem', padding: '2rem', border: '1px solid black', borderRadius: '5px'}}>
+      <h1>Calculator</h1>
+      <button onClick={increase} style={{padding: '0.5rem', margin: '0.5rem', color: 'green'}}>+</button>
+    </div>  
   );
 }
 
-function Description() {
-  return <p style={{ marginTop: "0.5rem" }}>This is a description of the card. It contains some information about the content.</p>
-}
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<CardList />);
+root.render(
+  <React.StrictMode>
+    <CardList />
+    <Calculator />
+  </React.StrictMode>
+)
