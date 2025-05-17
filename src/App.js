@@ -1,13 +1,14 @@
-import { cards } from './cards.js';
-import Card from './component/Card.js';
-function CardList() {
+import Calculator from "./component/Calculator";
+import CardList from "./component/Card";
+
+function App() {
   return (
-    <main className="card-list">
-      {cards.map((card) => {
-        return <Card key={card.id} {...card} />;
-      })}
-    </main>
+    <div className="App">
+      <h1 style={{ textAlign: "center", margin: "2rem" }}>Card List</h1>
+      <CardList />
+      <Calculator />
+    </div>
   );
 }
 
-export default CardList;
+export default App;

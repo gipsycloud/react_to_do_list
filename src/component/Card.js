@@ -1,3 +1,14 @@
+import { cards } from './cards.js';
+
+function CardList() {
+  return (
+    <main className="card-list">
+      {cards.map((card) => {
+        return <Card key={card.id} {...card} />;
+      })}
+    </main>
+  );
+}
 function Card(props) {
   console.log(props)
   // destructuring props
@@ -18,4 +29,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default CardList;
