@@ -1,6 +1,8 @@
 import Calculator from "./component/Calculator";
 import CardList from "./component/Card";
+import Reducer from "./component/Reducer";
 import UseEffect from "./component/UseEffect";
+import "./App.css";
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
       <CardList />
       <Calculator />
       <UseEffect />
+      <Reducer />
     </div>
   );
 }
