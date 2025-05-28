@@ -32,17 +32,16 @@ function UseEffect() {
     return <h2>Opps Error ... .. </h2>
   }
   return (
-    <div>
-      <ul>
-        {users.map((user) => {
-          return (<li key={user.id}>
-            <div style={{ textAlign: 'center', margin: '2rem', padding: '2rem', border: '1px solid black', borderRadius: '5px' }}>
-              <h4>{user.name}</h4>
-              <a href={user.html_url}>{user.email}</a>
-            </div>
-          </li>);
-        })}
-      </ul>
+    <div className='animated-cards'>
+      {users.map((user) => {
+        return (
+          <div key={user.id} className='card' style={{ textAlign: 'center', margin: '2rem', padding: '2rem', border: '1px solid black', borderRadius: '5px' }}>
+            <div class="card-icon">💡</div>
+            <h4>{user.name}</h4>
+            <a href={user.html_url}>{user.email}</a>
+          </div>
+        );
+      })}
     </div>
   );
 }
