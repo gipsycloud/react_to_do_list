@@ -10,6 +10,7 @@ function App() {
       <h1 style={{ textAlign: "center", margin: "2rem" }}>Card List</h1>
       <CardList />
       <Calculator />
+      <Reducer />
       <UseEffect />
       <Reducer />
     </div>
