@@ -69,7 +69,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
 - CSS
 - JSX - CSS
 - JSX - Javascript
@@ -81,3 +80,56 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - key Prop and Spread Operator
 - Even Basic
 - import and Export Statements
+
+blog-react-app/
+├── public/ # Static files
+│ ├── index.html
+│ ├── favicon.ico
+│ └── assets/ # Images, fonts, etc.
+│ ├── images/
+│ └── fonts/
+│
+├── src/
+│ ├── components/ # Reusable UI components
+│ │ ├── common/ # Very generic components (buttons, cards)
+│ │ │ ├── Button/
+│ │ │ │ ├── Button.jsx
+│ │ │ │ └── Button.module.css
+│ │ │ └── Card/
+│ │ ├── layout/ # Layout components
+│ │ │ ├── Header/
+│ │ │ ├── Footer/
+│ │ │ └── Layout.jsx
+│ │ └── blog/ # Blog-specific components
+│ │ ├── PostCard/
+│ │ ├── TagList/
+│ │ └── Comment/
+│ │
+│ ├── pages/ # Page-level components
+│ │ ├── Home/
+│ │ ├── Blog/
+│ │ │ ├── BlogList/
+│ │ │ └── BlogPost/
+│ │ ├── About/
+│ │ └── Contact/
+│ │
+│ ├── features/ # Feature modules
+│ │ ├── posts/ # Everything related to blog posts
+│ │ │ ├── postsSlice.js # Redux slice (if using Redux)
+│ │ │ ├── postsAPI.js # API calls
+│ │ │ └── hooks/ # Custom hooks
+│ │ └── comments/ # Everything related to comments
+│ │
+│ ├── hooks/ # Global custom hooks
+│ ├── context/ # React context providers
+│ ├── utils/ # Utility functions
+│ ├── styles/ # Global styles, themes
+│ │ ├── global.css
+│ │ └── theme.js
+│ ├── assets/ # Dynamic assets (logos, etc.)
+│ ├── App.jsx # Main app component
+│ └── index.js # Entry point
+│
+├── .env # Environment variables
+├── package.json
+└── README.md
