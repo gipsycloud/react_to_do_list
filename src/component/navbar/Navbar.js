@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav class="navbar">
-        <div class="navbar-container">
-            <Link to="/" class="navbar-logo">Apartment Mate</Link>
+    <nav className="navbar">
+        <div className="navbar-container">
+            <Link to="/" className="navbar-logo">Apartment Mate</Link>
             
-            <div class="navbar-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div className="navbar-toggle" id="mobile-menu">
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
             </div>
             
-            <ul class="navbar-menu">
-                <li class="navbar-item">
+            <ul className="navbar-menu">
+                <li className="navbar-item">
                   <Link to="/" className="navbar-links">
                     Home
                   </Link>
@@ -33,6 +33,11 @@ const Navbar = () => {
                 <li className="navbar-item">
                     <Link to="contact" className="navbar-links">
                     Contact
+                    </Link>
+                </li>
+                 <li className="navbar-item">
+                    <Link to="profile" className="navbar-links">
+                    Profile
                     </Link>
                 </li>
             </ul>
