@@ -4,14 +4,26 @@ import "./Profile.css";
   const GitUser = () => {
     const url = "https://api.github.com/users";
     const [gitusers, setGitUsers] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [ error, setError] = useState(null);
+    
     async function getGitUsers() {
       const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
       const data = await response.json();
       setGitUsers(data);
-      console.log(gitusers);
+      // console.log(gitusers);
     };
     useEffect(() => {
-      getGitUsers();
+      try {
+        getGitUsers();
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
     });
   return (
     <div className="profile-list">
