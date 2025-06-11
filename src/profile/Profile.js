@@ -7,7 +7,7 @@ function ProfileList() {
     <div className="profile-list">
       { profileDatas.map((profileData) => {
         return <Profile key={profileData.id} {...profileData} />;
-      })};
+      })}
     </div>
   )
 }

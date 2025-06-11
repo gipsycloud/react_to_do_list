@@ -1,10 +1,9 @@
-import React from "react";
+import GitUser from "../profile/GitUser";
 
 const About = () => {
   return (
-    <div className="about">
-      <h1>About Us</h1>
-    </div>
+    <GitUser />
+
   );
 }
 export default About;
