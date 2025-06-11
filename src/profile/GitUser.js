@@ -16,6 +16,7 @@ import "./Profile.css";
       setGitUsers(data);
       // console.log(gitusers);
     };
+
     useEffect(() => {
       try {
         getGitUsers();
@@ -24,7 +25,16 @@ import "./Profile.css";
       } finally {
         setLoading(false);
       }
-    });
+    }, []);
+
+    if(loading) {
+      return <div className="loading">Loading...</div>;
+    }
+
+    if (error) {
+      return <div className="error">Error: {error}</div>;
+    }
+    
   return (
     <div className="profile-list">
       {gitusers.map(gituser=> (
