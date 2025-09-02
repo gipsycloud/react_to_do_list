@@ -6,6 +6,7 @@ import About from "./features/About";
 import Services from "./features/Services";
 import Contact from "./features/Contact";
 import Profile from "./profile/Profile";
+import SearchMovie from "./SearchMovie";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/searchMovie" element={<SearchMovie />} />
         </Routes>
       </BrowserRouter>
     </div>

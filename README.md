@@ -133,3 +133,6 @@ blog-react-app/
 ├── .env # Environment variables
 ├── package.json
 └── README.md
+
+### `api key`
+api key: [https://www.themoviedb.org/settings/api]
