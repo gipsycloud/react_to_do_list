@@ -36,7 +36,7 @@ function UseEffect() {
       {users.map((user) => {
         return (
           <div key={user.id} className='card' style={{ textAlign: 'center', margin: '2rem', padding: '2rem', border: '1px solid black', borderRadius: '5px' }}>
-            <div class="card-icon">💡</div>
+            <div className="card-icon">💡</div>
             <h4>{user.name}</h4>
             <a href={user.html_url}>{user.email}</a>
           </div>
