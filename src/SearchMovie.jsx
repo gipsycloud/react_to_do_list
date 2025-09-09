@@ -1,13 +1,26 @@
 import { useState } from "react";
-import FavouriteList from "../src/component/FavouriteList";
+import SearchResults from "../src/component/SearchResults";
+import FavouriteMovies from "../src/component/FavouriteMovies";
 
 function SearchMovie() {
+  const style = {
+    border: "1px solid black",
+    margin: "10px",
+    padding: "10px",
+    borderRadius: "5px",
+    textAlign: "center",
+  }
   const [movieTitle, setMovieTitle] = useState("");
   const [favourites, setFavourites] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const addFavourite = (movie) => {
     setFavourites([...favourites, movie]);
   }
+
+  const removeFavourite = (movie) => {
+    setFavourites(favourites.filter((fav) => fav.id !== movie.id));
+  }
+
   console.log("favourites:", favourites);
   const handleSearchMovie = async (e) => {
     e.preventDefault();
@@ -23,7 +36,7 @@ function SearchMovie() {
     }
   }
   return (
-    <div>
+    <div style={style}>
       <div>SearchMovie</div>
       <div>
         <form onSubmit={handleSearchMovie}>
@@ -37,8 +50,13 @@ function SearchMovie() {
           <button type="submit">Search</button>
         </form>
       </div>
-      <FavouriteList searchResults={searchResults} addFavourite={addFavourite} />
-      {/* <FavouriteList favourites={favourites} /> */}
+      <SearchResults
+        searchResults={searchResults}
+        addFavourite={addFavourite}
+      />
+      <FavouriteMovies
+        favourites={favourites}
+        removeFavourite={removeFavourite} />
     </div>
   )
 }

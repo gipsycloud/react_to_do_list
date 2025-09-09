@@ -28,3 +28,17 @@ body {
     height: fit-content;
   }
 }
+
+.movie-grid ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .movie-grid ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
